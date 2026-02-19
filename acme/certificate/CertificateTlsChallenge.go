@@ -5,7 +5,7 @@ package certificate
 
 
 type CertificateTlsChallenge struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/resources/certificate#port Certificate#port}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.45.0/docs/resources/certificate#port Certificate#port}.
 	Port *float64 `field:"optional" json:"port" yaml:"port"`
 }
 
