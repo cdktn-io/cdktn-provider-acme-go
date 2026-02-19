@@ -1,27 +1,28 @@
-// Copyright (c) HashiCorp, Inc.
+// Copyright IBM Corp. 2021, 2026
 // SPDX-License-Identifier: MPL-2.0
 
 package certificate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v12/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v12/certificate/internal"
-	"github.com/hashicorp/terraform-cdk-go/cdktf"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/certificate/internal"
+	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs/resources/certificate acme_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/resources/certificate acme_certificate}.
 type Certificate interface {
-	cdktf.TerraformResource
+	cdktn.TerraformResource
 	AccountKeyPem() *string
 	SetAccountKeyPem(val *string)
 	AccountKeyPemInput() *string
 	// Experimental.
-	CdktfStack() cdktf.TerraformStack
+	CdktfStack() cdktn.TerraformStack
 	CertificateDomain() *string
 	CertificateNotAfter() *string
+	CertificateNotBefore() *string
 	CertificateP12() *string
 	CertificateP12Password() *string
 	SetCertificateP12Password(val *string)
@@ -48,6 +49,9 @@ type Certificate interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DeactivateAuthorizations() interface{}
+	SetDeactivateAuthorizations(val interface{})
+	DeactivateAuthorizationsInput() interface{}
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -58,9 +62,9 @@ type Certificate interface {
 	DnsChallenge() CertificateDnsChallengeList
 	DnsChallengeInput() interface{}
 	// Experimental.
-	ForEach() cdktf.ITerraformIterator
+	ForEach() cdktn.ITerraformIterator
 	// Experimental.
-	SetForEach(val cdktf.ITerraformIterator)
+	SetForEach(val cdktn.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -81,9 +85,12 @@ type Certificate interface {
 	SetKeyType(val *string)
 	KeyTypeInput() *string
 	// Experimental.
-	Lifecycle() *cdktf.TerraformResourceLifecycle
+	Lifecycle() *cdktn.TerraformResourceLifecycle
 	// Experimental.
-	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	SetLifecycle(val *cdktn.TerraformResourceLifecycle)
+	MinDaysDynamic() interface{}
+	SetMinDaysDynamic(val interface{})
+	MinDaysDynamicInput() interface{}
 	MinDaysRemaining() *float64
 	SetMinDaysRemaining(val *float64)
 	MinDaysRemainingInput() *float64
@@ -102,10 +109,13 @@ type Certificate interface {
 	Profile() *string
 	SetProfile(val *string)
 	ProfileInput() *string
+	PropagationWait() *float64
+	SetPropagationWait(val *float64)
+	PropagationWaitInput() *float64
 	// Experimental.
-	Provider() cdktf.TerraformProvider
+	Provider() cdktn.TerraformProvider
 	// Experimental.
-	SetProvider(val cdktf.TerraformProvider)
+	SetProvider(val cdktn.TerraformProvider)
 	// Experimental.
 	Provisioners() *[]interface{}
 	// Experimental.
@@ -136,7 +146,7 @@ type Certificate interface {
 	SetSubjectAlternativeNames(val *[]*string)
 	SubjectAlternativeNamesInput() *[]*string
 	// Experimental.
-	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
+	TerraformGeneratorMetadata() *cdktn.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
@@ -146,6 +156,9 @@ type Certificate interface {
 	UseRenewalInfo() interface{}
 	SetUseRenewalInfo(val interface{})
 	UseRenewalInfoInput() interface{}
+	ValidityDays() *float64
+	SetValidityDays(val *float64)
+	ValidityDaysInput() *float64
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -154,7 +167,7 @@ type Certificate interface {
 	// Experimental.
 	GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 	// Experimental.
-	GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable
+	GetBooleanAttribute(terraformAttribute *string) cdktn.IResolvable
 	// Experimental.
 	GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 	// Experimental.
@@ -172,9 +185,9 @@ type Certificate interface {
 	// Experimental.
 	HasResourceMove() interface{}
 	// Experimental.
-	ImportFrom(id *string, provider cdktf.TerraformProvider)
+	ImportFrom(id *string, provider cdktn.TerraformProvider)
 	// Experimental.
-	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktn.IResolvable
 	// Move the resource corresponding to "id" to this resource.
 	//
 	// Note that the resource being moved from must be marked as moved using it's instance function.
@@ -199,6 +212,7 @@ type Certificate interface {
 	ResetCertificateRequestPem()
 	ResetCertTimeout()
 	ResetCommonName()
+	ResetDeactivateAuthorizations()
 	ResetDisableCompletePropagation()
 	ResetDnsChallenge()
 	ResetHttpChallenge()
@@ -207,6 +221,7 @@ type Certificate interface {
 	ResetHttpWebrootChallenge()
 	ResetId()
 	ResetKeyType()
+	ResetMinDaysDynamic()
 	ResetMinDaysRemaining()
 	ResetMustStaple()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -215,6 +230,7 @@ type Certificate interface {
 	ResetPreCheckDelay()
 	ResetPreferredChain()
 	ResetProfile()
+	ResetPropagationWait()
 	ResetRecursiveNameservers()
 	ResetRenewalInfoIgnoreRetryAfter()
 	ResetRenewalInfoMaxSleep()
@@ -223,6 +239,7 @@ type Certificate interface {
 	ResetSubjectAlternativeNames()
 	ResetTlsChallenge()
 	ResetUseRenewalInfo()
+	ResetValidityDays()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -238,7 +255,7 @@ type Certificate interface {
 
 // The jsii proxy struct for Certificate
 type jsiiProxy_Certificate struct {
-	internal.Type__cdktfTerraformResource
+	internal.Type__cdktnTerraformResource
 }
 
 func (j *jsiiProxy_Certificate) AccountKeyPem() *string {
@@ -261,8 +278,8 @@ func (j *jsiiProxy_Certificate) AccountKeyPemInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Certificate) CdktfStack() cdktf.TerraformStack {
-	var returns cdktf.TerraformStack
+func (j *jsiiProxy_Certificate) CdktfStack() cdktn.TerraformStack {
+	var returns cdktn.TerraformStack
 	_jsii_.Get(
 		j,
 		"cdktfStack",
@@ -286,6 +303,16 @@ func (j *jsiiProxy_Certificate) CertificateNotAfter() *string {
 	_jsii_.Get(
 		j,
 		"certificateNotAfter",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) CertificateNotBefore() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"certificateNotBefore",
 		&returns,
 	)
 	return returns
@@ -441,6 +468,26 @@ func (j *jsiiProxy_Certificate) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Certificate) DeactivateAuthorizations() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deactivateAuthorizations",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) DeactivateAuthorizationsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deactivateAuthorizationsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Certificate) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -491,8 +538,8 @@ func (j *jsiiProxy_Certificate) DnsChallengeInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Certificate) ForEach() cdktf.ITerraformIterator {
-	var returns cdktf.ITerraformIterator
+func (j *jsiiProxy_Certificate) ForEach() cdktn.ITerraformIterator {
+	var returns cdktn.ITerraformIterator
 	_jsii_.Get(
 		j,
 		"forEach",
@@ -651,11 +698,31 @@ func (j *jsiiProxy_Certificate) KeyTypeInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Certificate) Lifecycle() *cdktf.TerraformResourceLifecycle {
-	var returns *cdktf.TerraformResourceLifecycle
+func (j *jsiiProxy_Certificate) Lifecycle() *cdktn.TerraformResourceLifecycle {
+	var returns *cdktn.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) MinDaysDynamic() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"minDaysDynamic",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) MinDaysDynamicInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"minDaysDynamicInput",
 		&returns,
 	)
 	return returns
@@ -781,8 +848,28 @@ func (j *jsiiProxy_Certificate) ProfileInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Certificate) Provider() cdktf.TerraformProvider {
-	var returns cdktf.TerraformProvider
+func (j *jsiiProxy_Certificate) PropagationWait() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"propagationWait",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) PropagationWaitInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"propagationWaitInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) Provider() cdktn.TerraformProvider {
+	var returns cdktn.TerraformProvider
 	_jsii_.Get(
 		j,
 		"provider",
@@ -981,8 +1068,8 @@ func (j *jsiiProxy_Certificate) SubjectAlternativeNamesInput() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_Certificate) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
-	var returns *cdktf.TerraformProviderGeneratorMetadata
+func (j *jsiiProxy_Certificate) TerraformGeneratorMetadata() *cdktn.TerraformProviderGeneratorMetadata {
+	var returns *cdktn.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
 		j,
 		"terraformGeneratorMetadata",
@@ -1051,8 +1138,28 @@ func (j *jsiiProxy_Certificate) UseRenewalInfoInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Certificate) ValidityDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"validityDays",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs/resources/certificate acme_certificate} Resource.
+func (j *jsiiProxy_Certificate) ValidityDaysInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"validityDaysInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate(scope constructs.Construct, id *string, config *CertificateConfig) Certificate {
 	_init_.Initialize()
 
@@ -1062,7 +1169,7 @@ func NewCertificate(scope constructs.Construct, id *string, config *CertificateC
 	j := jsiiProxy_Certificate{}
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.certificate.Certificate",
+		"@cdktn/provider-acme.certificate.Certificate",
 		[]interface{}{scope, id, config},
 		&j,
 	)
@@ -1070,12 +1177,12 @@ func NewCertificate(scope constructs.Construct, id *string, config *CertificateC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate_Override(c Certificate, scope constructs.Construct, id *string, config *CertificateConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.certificate.Certificate",
+		"@cdktn/provider-acme.certificate.Certificate",
 		[]interface{}{scope, id, config},
 		c,
 	)
@@ -1158,6 +1265,17 @@ func (j *jsiiProxy_Certificate)SetCount(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Certificate)SetDeactivateAuthorizations(val interface{}) {
+	if err := j.validateSetDeactivateAuthorizationsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"deactivateAuthorizations",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Certificate)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
@@ -1177,7 +1295,7 @@ func (j *jsiiProxy_Certificate)SetDisableCompletePropagation(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Certificate)SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_Certificate)SetForEach(val cdktn.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -1207,13 +1325,24 @@ func (j *jsiiProxy_Certificate)SetKeyType(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Certificate)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_Certificate)SetLifecycle(val *cdktn.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Certificate)SetMinDaysDynamic(val interface{}) {
+	if err := j.validateSetMinDaysDynamicParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"minDaysDynamic",
 		val,
 	)
 }
@@ -1273,7 +1402,18 @@ func (j *jsiiProxy_Certificate)SetProfile(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Certificate)SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_Certificate)SetPropagationWait(val *float64) {
+	if err := j.validateSetPropagationWaitParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"propagationWait",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Certificate)SetProvider(val cdktn.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -1369,17 +1509,28 @@ func (j *jsiiProxy_Certificate)SetUseRenewalInfo(val interface{}) {
 	)
 }
 
-// Generates CDKTF code for importing a Certificate resource upon running "cdktf plan <stack-name>".
-func Certificate_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+func (j *jsiiProxy_Certificate)SetValidityDays(val *float64) {
+	if err := j.validateSetValidityDaysParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"validityDays",
+		val,
+	)
+}
+
+// Generates CDKTN code for importing a Certificate resource upon running "cdktn plan <stack-name>".
+func Certificate_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktn.TerraformProvider) cdktn.ImportableResource {
 	_init_.Initialize()
 
 	if err := validateCertificate_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
 		panic(err)
 	}
-	var returns cdktf.ImportableResource
+	var returns cdktn.ImportableResource
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.certificate.Certificate",
+		"@cdktn/provider-acme.certificate.Certificate",
 		"generateConfigForImport",
 		[]interface{}{scope, importToId, importFromId, provider},
 		&returns,
@@ -1414,7 +1565,7 @@ func Certificate_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.certificate.Certificate",
+		"@cdktn/provider-acme.certificate.Certificate",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -1433,7 +1584,7 @@ func Certificate_IsTerraformElement(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.certificate.Certificate",
+		"@cdktn/provider-acme.certificate.Certificate",
 		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
@@ -1452,7 +1603,7 @@ func Certificate_IsTerraformResource(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.certificate.Certificate",
+		"@cdktn/provider-acme.certificate.Certificate",
 		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
@@ -1465,7 +1616,7 @@ func Certificate_TfResourceType() *string {
 	_init_.Initialize()
 	var returns *string
 	_jsii_.StaticGet(
-		"@cdktf/provider-acme.certificate.Certificate",
+		"@cdktn/provider-acme.certificate.Certificate",
 		"tfResourceType",
 		&returns,
 	)
@@ -1510,11 +1661,11 @@ func (c *jsiiProxy_Certificate) GetAnyMapAttribute(terraformAttribute *string) *
 	return returns
 }
 
-func (c *jsiiProxy_Certificate) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (c *jsiiProxy_Certificate) GetBooleanAttribute(terraformAttribute *string) cdktn.IResolvable {
 	if err := c.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
-	var returns cdktf.IResolvable
+	var returns cdktn.IResolvable
 
 	_jsii_.Invoke(
 		c,
@@ -1651,7 +1802,7 @@ func (c *jsiiProxy_Certificate) HasResourceMove() interface{} {
 	return returns
 }
 
-func (c *jsiiProxy_Certificate) ImportFrom(id *string, provider cdktf.TerraformProvider) {
+func (c *jsiiProxy_Certificate) ImportFrom(id *string, provider cdktn.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
 	}
@@ -1662,11 +1813,11 @@ func (c *jsiiProxy_Certificate) ImportFrom(id *string, provider cdktf.TerraformP
 	)
 }
 
-func (c *jsiiProxy_Certificate) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (c *jsiiProxy_Certificate) InterpolationForAttribute(terraformAttribute *string) cdktn.IResolvable {
 	if err := c.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
-	var returns cdktf.IResolvable
+	var returns cdktn.IResolvable
 
 	_jsii_.Invoke(
 		c,
@@ -1820,6 +1971,14 @@ func (c *jsiiProxy_Certificate) ResetCommonName() {
 	)
 }
 
+func (c *jsiiProxy_Certificate) ResetDeactivateAuthorizations() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDeactivateAuthorizations",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_Certificate) ResetDisableCompletePropagation() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1884,6 +2043,14 @@ func (c *jsiiProxy_Certificate) ResetKeyType() {
 	)
 }
 
+func (c *jsiiProxy_Certificate) ResetMinDaysDynamic() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMinDaysDynamic",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_Certificate) ResetMinDaysRemaining() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1928,6 +2095,14 @@ func (c *jsiiProxy_Certificate) ResetProfile() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetProfile",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Certificate) ResetPropagationWait() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPropagationWait",
 		nil, // no parameters
 	)
 }
@@ -1992,6 +2167,14 @@ func (c *jsiiProxy_Certificate) ResetUseRenewalInfo() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetUseRenewalInfo",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Certificate) ResetValidityDays() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValidityDays",
 		nil, // no parameters
 	)
 }

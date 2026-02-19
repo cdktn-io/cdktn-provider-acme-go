@@ -1,4 +1,4 @@
-// Copyright (c) HashiCorp, Inc.
+// Copyright IBM Corp. 2021, 2026
 // SPDX-License-Identifier: MPL-2.0
 
 //go:build no_runtime_type_checking
@@ -143,6 +143,10 @@ func (j *jsiiProxy_Certificate) validateSetCountParameters(val interface{}) erro
 	return nil
 }
 
+func (j *jsiiProxy_Certificate) validateSetDeactivateAuthorizationsParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Certificate) validateSetDisableCompletePropagationParameters(val interface{}) error {
 	return nil
 }
@@ -155,7 +159,11 @@ func (j *jsiiProxy_Certificate) validateSetKeyTypeParameters(val *string) error 
 	return nil
 }
 
-func (j *jsiiProxy_Certificate) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+func (j *jsiiProxy_Certificate) validateSetLifecycleParameters(val *cdktn.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_Certificate) validateSetMinDaysDynamicParameters(val interface{}) error {
 	return nil
 }
 
@@ -176,6 +184,10 @@ func (j *jsiiProxy_Certificate) validateSetPreferredChainParameters(val *string)
 }
 
 func (j *jsiiProxy_Certificate) validateSetProfileParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Certificate) validateSetPropagationWaitParameters(val *float64) error {
 	return nil
 }
 
@@ -208,6 +220,10 @@ func (j *jsiiProxy_Certificate) validateSetSubjectAlternativeNamesParameters(val
 }
 
 func (j *jsiiProxy_Certificate) validateSetUseRenewalInfoParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Certificate) validateSetValidityDaysParameters(val *float64) error {
 	return nil
 }
 

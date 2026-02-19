@@ -1,20 +1,20 @@
-// Copyright (c) HashiCorp, Inc.
+// Copyright IBM Corp. 2021, 2026
 // SPDX-License-Identifier: MPL-2.0
 
 package registration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v12/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v12/registration/internal"
-	"github.com/hashicorp/terraform-cdk-go/cdktf"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/registration/internal"
+	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs/resources/registration acme_registration}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/resources/registration acme_registration}.
 type Registration interface {
-	cdktf.TerraformResource
+	cdktn.TerraformResource
 	AccountKeyAlgorithm() *string
 	SetAccountKeyAlgorithm(val *string)
 	AccountKeyAlgorithmInput() *string
@@ -28,7 +28,7 @@ type Registration interface {
 	SetAccountKeyRsaBits(val *float64)
 	AccountKeyRsaBitsInput() *float64
 	// Experimental.
-	CdktfStack() cdktf.TerraformStack
+	CdktfStack() cdktn.TerraformStack
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -49,9 +49,9 @@ type Registration interface {
 	ExternalAccountBinding() RegistrationExternalAccountBindingOutputReference
 	ExternalAccountBindingInput() *RegistrationExternalAccountBinding
 	// Experimental.
-	ForEach() cdktf.ITerraformIterator
+	ForEach() cdktn.ITerraformIterator
 	// Experimental.
-	SetForEach(val cdktf.ITerraformIterator)
+	SetForEach(val cdktn.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -60,15 +60,15 @@ type Registration interface {
 	SetId(val *string)
 	IdInput() *string
 	// Experimental.
-	Lifecycle() *cdktf.TerraformResourceLifecycle
+	Lifecycle() *cdktn.TerraformResourceLifecycle
 	// Experimental.
-	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	SetLifecycle(val *cdktn.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
-	Provider() cdktf.TerraformProvider
+	Provider() cdktn.TerraformProvider
 	// Experimental.
-	SetProvider(val cdktf.TerraformProvider)
+	SetProvider(val cdktn.TerraformProvider)
 	// Experimental.
 	Provisioners() *[]interface{}
 	// Experimental.
@@ -77,7 +77,7 @@ type Registration interface {
 	RawOverrides() interface{}
 	RegistrationUrl() *string
 	// Experimental.
-	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
+	TerraformGeneratorMetadata() *cdktn.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
@@ -90,7 +90,7 @@ type Registration interface {
 	// Experimental.
 	GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 	// Experimental.
-	GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable
+	GetBooleanAttribute(terraformAttribute *string) cdktn.IResolvable
 	// Experimental.
 	GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 	// Experimental.
@@ -108,9 +108,9 @@ type Registration interface {
 	// Experimental.
 	HasResourceMove() interface{}
 	// Experimental.
-	ImportFrom(id *string, provider cdktf.TerraformProvider)
+	ImportFrom(id *string, provider cdktn.TerraformProvider)
 	// Experimental.
-	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktn.IResolvable
 	// Move the resource corresponding to "id" to this resource.
 	//
 	// Note that the resource being moved from must be marked as moved using it's instance function.
@@ -130,6 +130,7 @@ type Registration interface {
 	ResetAccountKeyEcdsaCurve()
 	ResetAccountKeyPem()
 	ResetAccountKeyRsaBits()
+	ResetEmailAddress()
 	ResetExternalAccountBinding()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -150,7 +151,7 @@ type Registration interface {
 
 // The jsii proxy struct for Registration
 type jsiiProxy_Registration struct {
-	internal.Type__cdktfTerraformResource
+	internal.Type__cdktnTerraformResource
 }
 
 func (j *jsiiProxy_Registration) AccountKeyAlgorithm() *string {
@@ -233,8 +234,8 @@ func (j *jsiiProxy_Registration) AccountKeyRsaBitsInput() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_Registration) CdktfStack() cdktf.TerraformStack {
-	var returns cdktf.TerraformStack
+func (j *jsiiProxy_Registration) CdktfStack() cdktn.TerraformStack {
+	var returns cdktn.TerraformStack
 	_jsii_.Get(
 		j,
 		"cdktfStack",
@@ -323,8 +324,8 @@ func (j *jsiiProxy_Registration) ExternalAccountBindingInput() *RegistrationExte
 	return returns
 }
 
-func (j *jsiiProxy_Registration) ForEach() cdktf.ITerraformIterator {
-	var returns cdktf.ITerraformIterator
+func (j *jsiiProxy_Registration) ForEach() cdktn.ITerraformIterator {
+	var returns cdktn.ITerraformIterator
 	_jsii_.Get(
 		j,
 		"forEach",
@@ -373,8 +374,8 @@ func (j *jsiiProxy_Registration) IdInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Registration) Lifecycle() *cdktf.TerraformResourceLifecycle {
-	var returns *cdktf.TerraformResourceLifecycle
+func (j *jsiiProxy_Registration) Lifecycle() *cdktn.TerraformResourceLifecycle {
+	var returns *cdktn.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
 		"lifecycle",
@@ -393,8 +394,8 @@ func (j *jsiiProxy_Registration) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_Registration) Provider() cdktf.TerraformProvider {
-	var returns cdktf.TerraformProvider
+func (j *jsiiProxy_Registration) Provider() cdktn.TerraformProvider {
+	var returns cdktn.TerraformProvider
 	_jsii_.Get(
 		j,
 		"provider",
@@ -433,8 +434,8 @@ func (j *jsiiProxy_Registration) RegistrationUrl() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Registration) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
-	var returns *cdktf.TerraformProviderGeneratorMetadata
+func (j *jsiiProxy_Registration) TerraformGeneratorMetadata() *cdktn.TerraformProviderGeneratorMetadata {
+	var returns *cdktn.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
 		j,
 		"terraformGeneratorMetadata",
@@ -464,7 +465,7 @@ func (j *jsiiProxy_Registration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/resources/registration acme_registration} Resource.
 func NewRegistration(scope constructs.Construct, id *string, config *RegistrationConfig) Registration {
 	_init_.Initialize()
 
@@ -474,7 +475,7 @@ func NewRegistration(scope constructs.Construct, id *string, config *Registratio
 	j := jsiiProxy_Registration{}
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.registration.Registration",
+		"@cdktn/provider-acme.registration.Registration",
 		[]interface{}{scope, id, config},
 		&j,
 	)
@@ -482,12 +483,12 @@ func NewRegistration(scope constructs.Construct, id *string, config *Registratio
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/resources/registration acme_registration} Resource.
 func NewRegistration_Override(r Registration, scope constructs.Construct, id *string, config *RegistrationConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.registration.Registration",
+		"@cdktn/provider-acme.registration.Registration",
 		[]interface{}{scope, id, config},
 		r,
 	)
@@ -578,7 +579,7 @@ func (j *jsiiProxy_Registration)SetEmailAddress(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Registration)SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_Registration)SetForEach(val cdktn.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -597,7 +598,7 @@ func (j *jsiiProxy_Registration)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Registration)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_Registration)SetLifecycle(val *cdktn.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
 	}
@@ -608,7 +609,7 @@ func (j *jsiiProxy_Registration)SetLifecycle(val *cdktf.TerraformResourceLifecyc
 	)
 }
 
-func (j *jsiiProxy_Registration)SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_Registration)SetProvider(val cdktn.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -627,17 +628,17 @@ func (j *jsiiProxy_Registration)SetProvisioners(val *[]interface{}) {
 	)
 }
 
-// Generates CDKTF code for importing a Registration resource upon running "cdktf plan <stack-name>".
-func Registration_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+// Generates CDKTN code for importing a Registration resource upon running "cdktn plan <stack-name>".
+func Registration_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktn.TerraformProvider) cdktn.ImportableResource {
 	_init_.Initialize()
 
 	if err := validateRegistration_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
 		panic(err)
 	}
-	var returns cdktf.ImportableResource
+	var returns cdktn.ImportableResource
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.registration.Registration",
+		"@cdktn/provider-acme.registration.Registration",
 		"generateConfigForImport",
 		[]interface{}{scope, importToId, importFromId, provider},
 		&returns,
@@ -672,7 +673,7 @@ func Registration_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.registration.Registration",
+		"@cdktn/provider-acme.registration.Registration",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -691,7 +692,7 @@ func Registration_IsTerraformElement(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.registration.Registration",
+		"@cdktn/provider-acme.registration.Registration",
 		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
@@ -710,7 +711,7 @@ func Registration_IsTerraformResource(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.registration.Registration",
+		"@cdktn/provider-acme.registration.Registration",
 		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
@@ -723,7 +724,7 @@ func Registration_TfResourceType() *string {
 	_init_.Initialize()
 	var returns *string
 	_jsii_.StaticGet(
-		"@cdktf/provider-acme.registration.Registration",
+		"@cdktn/provider-acme.registration.Registration",
 		"tfResourceType",
 		&returns,
 	)
@@ -768,11 +769,11 @@ func (r *jsiiProxy_Registration) GetAnyMapAttribute(terraformAttribute *string) 
 	return returns
 }
 
-func (r *jsiiProxy_Registration) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (r *jsiiProxy_Registration) GetBooleanAttribute(terraformAttribute *string) cdktn.IResolvable {
 	if err := r.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
-	var returns cdktf.IResolvable
+	var returns cdktn.IResolvable
 
 	_jsii_.Invoke(
 		r,
@@ -909,7 +910,7 @@ func (r *jsiiProxy_Registration) HasResourceMove() interface{} {
 	return returns
 }
 
-func (r *jsiiProxy_Registration) ImportFrom(id *string, provider cdktf.TerraformProvider) {
+func (r *jsiiProxy_Registration) ImportFrom(id *string, provider cdktn.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
 	}
@@ -920,11 +921,11 @@ func (r *jsiiProxy_Registration) ImportFrom(id *string, provider cdktf.Terraform
 	)
 }
 
-func (r *jsiiProxy_Registration) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (r *jsiiProxy_Registration) InterpolationForAttribute(terraformAttribute *string) cdktn.IResolvable {
 	if err := r.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
-	var returns cdktf.IResolvable
+	var returns cdktn.IResolvable
 
 	_jsii_.Invoke(
 		r,
@@ -1019,6 +1020,14 @@ func (r *jsiiProxy_Registration) ResetAccountKeyRsaBits() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetAccountKeyRsaBits",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Registration) ResetEmailAddress() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetEmailAddress",
 		nil, // no parameters
 	)
 }

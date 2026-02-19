@@ -1,4 +1,4 @@
-// Copyright (c) HashiCorp, Inc.
+// Copyright IBM Corp. 2021, 2026
 // SPDX-License-Identifier: MPL-2.0
 
 package registration
@@ -11,7 +11,7 @@ import (
 
 func init() {
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.registration.Registration",
+		"@cdktn/provider-acme.registration.Registration",
 		reflect.TypeOf((*Registration)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "accountKeyAlgorithm", GoGetter: "AccountKeyAlgorithm"},
@@ -65,6 +65,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetAccountKeyEcdsaCurve", GoMethod: "ResetAccountKeyEcdsaCurve"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAccountKeyPem", GoMethod: "ResetAccountKeyPem"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAccountKeyRsaBits", GoMethod: "ResetAccountKeyRsaBits"},
+			_jsii_.MemberMethod{JsiiMethod: "resetEmailAddress", GoMethod: "ResetEmailAddress"},
 			_jsii_.MemberMethod{JsiiMethod: "resetExternalAccountBinding", GoMethod: "ResetExternalAccountBinding"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
@@ -80,20 +81,20 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_Registration{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformResource)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnTerraformResource)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-acme.registration.RegistrationConfig",
+		"@cdktn/provider-acme.registration.RegistrationConfig",
 		reflect.TypeOf((*RegistrationConfig)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-acme.registration.RegistrationExternalAccountBinding",
+		"@cdktn/provider-acme.registration.RegistrationExternalAccountBinding",
 		reflect.TypeOf((*RegistrationExternalAccountBinding)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.registration.RegistrationExternalAccountBindingOutputReference",
+		"@cdktn/provider-acme.registration.RegistrationExternalAccountBindingOutputReference",
 		reflect.TypeOf((*RegistrationExternalAccountBindingOutputReference)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
@@ -124,7 +125,7 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_RegistrationExternalAccountBindingOutputReference{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnComplexObject)
 			return &j
 		},
 	)

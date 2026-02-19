@@ -1,4 +1,4 @@
-// Copyright (c) HashiCorp, Inc.
+// Copyright IBM Corp. 2021, 2026
 // SPDX-License-Identifier: MPL-2.0
 
 package certificate
@@ -11,7 +11,7 @@ import (
 
 func init() {
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.certificate.Certificate",
+		"@cdktn/provider-acme.certificate.Certificate",
 		reflect.TypeOf((*Certificate)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "accountKeyPem", GoGetter: "AccountKeyPem"},
@@ -21,6 +21,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateDomain", GoGetter: "CertificateDomain"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateNotAfter", GoGetter: "CertificateNotAfter"},
+			_jsii_.MemberProperty{JsiiProperty: "certificateNotBefore", GoGetter: "CertificateNotBefore"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateP12", GoGetter: "CertificateP12"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateP12Password", GoGetter: "CertificateP12Password"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateP12PasswordInput", GoGetter: "CertificateP12PasswordInput"},
@@ -36,6 +37,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "connection", GoGetter: "Connection"},
 			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "count", GoGetter: "Count"},
+			_jsii_.MemberProperty{JsiiProperty: "deactivateAuthorizations", GoGetter: "DeactivateAuthorizations"},
+			_jsii_.MemberProperty{JsiiProperty: "deactivateAuthorizationsInput", GoGetter: "DeactivateAuthorizationsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "dependsOn", GoGetter: "DependsOn"},
 			_jsii_.MemberProperty{JsiiProperty: "disableCompletePropagation", GoGetter: "DisableCompletePropagation"},
 			_jsii_.MemberProperty{JsiiProperty: "disableCompletePropagationInput", GoGetter: "DisableCompletePropagationInput"},
@@ -70,6 +73,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "keyType", GoGetter: "KeyType"},
 			_jsii_.MemberProperty{JsiiProperty: "keyTypeInput", GoGetter: "KeyTypeInput"},
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
+			_jsii_.MemberProperty{JsiiProperty: "minDaysDynamic", GoGetter: "MinDaysDynamic"},
+			_jsii_.MemberProperty{JsiiProperty: "minDaysDynamicInput", GoGetter: "MinDaysDynamicInput"},
 			_jsii_.MemberProperty{JsiiProperty: "minDaysRemaining", GoGetter: "MinDaysRemaining"},
 			_jsii_.MemberProperty{JsiiProperty: "minDaysRemainingInput", GoGetter: "MinDaysRemainingInput"},
 			_jsii_.MemberMethod{JsiiMethod: "moveFromId", GoMethod: "MoveFromId"},
@@ -86,6 +91,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "privateKeyPem", GoGetter: "PrivateKeyPem"},
 			_jsii_.MemberProperty{JsiiProperty: "profile", GoGetter: "Profile"},
 			_jsii_.MemberProperty{JsiiProperty: "profileInput", GoGetter: "ProfileInput"},
+			_jsii_.MemberProperty{JsiiProperty: "propagationWait", GoGetter: "PropagationWait"},
+			_jsii_.MemberProperty{JsiiProperty: "propagationWaitInput", GoGetter: "PropagationWaitInput"},
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
 			_jsii_.MemberMethod{JsiiMethod: "putDnsChallenge", GoMethod: "PutDnsChallenge"},
@@ -110,6 +117,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetCertificateRequestPem", GoMethod: "ResetCertificateRequestPem"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCertTimeout", GoMethod: "ResetCertTimeout"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCommonName", GoMethod: "ResetCommonName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetDeactivateAuthorizations", GoMethod: "ResetDeactivateAuthorizations"},
 			_jsii_.MemberMethod{JsiiMethod: "resetDisableCompletePropagation", GoMethod: "ResetDisableCompletePropagation"},
 			_jsii_.MemberMethod{JsiiMethod: "resetDnsChallenge", GoMethod: "ResetDnsChallenge"},
 			_jsii_.MemberMethod{JsiiMethod: "resetHttpChallenge", GoMethod: "ResetHttpChallenge"},
@@ -118,12 +126,14 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetHttpWebrootChallenge", GoMethod: "ResetHttpWebrootChallenge"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetKeyType", GoMethod: "ResetKeyType"},
+			_jsii_.MemberMethod{JsiiMethod: "resetMinDaysDynamic", GoMethod: "ResetMinDaysDynamic"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMinDaysRemaining", GoMethod: "ResetMinDaysRemaining"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMustStaple", GoMethod: "ResetMustStaple"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPreCheckDelay", GoMethod: "ResetPreCheckDelay"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPreferredChain", GoMethod: "ResetPreferredChain"},
 			_jsii_.MemberMethod{JsiiMethod: "resetProfile", GoMethod: "ResetProfile"},
+			_jsii_.MemberMethod{JsiiMethod: "resetPropagationWait", GoMethod: "ResetPropagationWait"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRecursiveNameservers", GoMethod: "ResetRecursiveNameservers"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRenewalInfoIgnoreRetryAfter", GoMethod: "ResetRenewalInfoIgnoreRetryAfter"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRenewalInfoMaxSleep", GoMethod: "ResetRenewalInfoMaxSleep"},
@@ -132,6 +142,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetSubjectAlternativeNames", GoMethod: "ResetSubjectAlternativeNames"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTlsChallenge", GoMethod: "ResetTlsChallenge"},
 			_jsii_.MemberMethod{JsiiMethod: "resetUseRenewalInfo", GoMethod: "ResetUseRenewalInfo"},
+			_jsii_.MemberMethod{JsiiMethod: "resetValidityDays", GoMethod: "ResetValidityDays"},
 			_jsii_.MemberProperty{JsiiProperty: "revokeCertificateOnDestroy", GoGetter: "RevokeCertificateOnDestroy"},
 			_jsii_.MemberProperty{JsiiProperty: "revokeCertificateOnDestroyInput", GoGetter: "RevokeCertificateOnDestroyInput"},
 			_jsii_.MemberProperty{JsiiProperty: "revokeCertificateReason", GoGetter: "RevokeCertificateReason"},
@@ -151,23 +162,25 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
 			_jsii_.MemberProperty{JsiiProperty: "useRenewalInfo", GoGetter: "UseRenewalInfo"},
 			_jsii_.MemberProperty{JsiiProperty: "useRenewalInfoInput", GoGetter: "UseRenewalInfoInput"},
+			_jsii_.MemberProperty{JsiiProperty: "validityDays", GoGetter: "ValidityDays"},
+			_jsii_.MemberProperty{JsiiProperty: "validityDaysInput", GoGetter: "ValidityDaysInput"},
 		},
 		func() interface{} {
 			j := jsiiProxy_Certificate{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformResource)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnTerraformResource)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-acme.certificate.CertificateConfig",
+		"@cdktn/provider-acme.certificate.CertificateConfig",
 		reflect.TypeOf((*CertificateConfig)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-acme.certificate.CertificateDnsChallenge",
+		"@cdktn/provider-acme.certificate.CertificateDnsChallenge",
 		reflect.TypeOf((*CertificateDnsChallenge)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.certificate.CertificateDnsChallengeList",
+		"@cdktn/provider-acme.certificate.CertificateDnsChallengeList",
 		reflect.TypeOf((*CertificateDnsChallengeList)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
@@ -184,12 +197,12 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_CertificateDnsChallengeList{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnComplexList)
 			return &j
 		},
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.certificate.CertificateDnsChallengeOutputReference",
+		"@cdktn/provider-acme.certificate.CertificateDnsChallengeOutputReference",
 		reflect.TypeOf((*CertificateDnsChallengeOutputReference)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
@@ -221,16 +234,16 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_CertificateDnsChallengeOutputReference{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnComplexObject)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-acme.certificate.CertificateHttpChallenge",
+		"@cdktn/provider-acme.certificate.CertificateHttpChallenge",
 		reflect.TypeOf((*CertificateHttpChallenge)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.certificate.CertificateHttpChallengeOutputReference",
+		"@cdktn/provider-acme.certificate.CertificateHttpChallengeOutputReference",
 		reflect.TypeOf((*CertificateHttpChallengeOutputReference)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
@@ -263,16 +276,16 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_CertificateHttpChallengeOutputReference{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnComplexObject)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallenge",
+		"@cdktn/provider-acme.certificate.CertificateHttpMemcachedChallenge",
 		reflect.TypeOf((*CertificateHttpMemcachedChallenge)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.certificate.CertificateHttpMemcachedChallengeOutputReference",
+		"@cdktn/provider-acme.certificate.CertificateHttpMemcachedChallengeOutputReference",
 		reflect.TypeOf((*CertificateHttpMemcachedChallengeOutputReference)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
@@ -301,16 +314,16 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_CertificateHttpMemcachedChallengeOutputReference{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnComplexObject)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-acme.certificate.CertificateHttpS3Challenge",
+		"@cdktn/provider-acme.certificate.CertificateHttpS3Challenge",
 		reflect.TypeOf((*CertificateHttpS3Challenge)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference",
+		"@cdktn/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference",
 		reflect.TypeOf((*CertificateHttpS3ChallengeOutputReference)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
@@ -339,16 +352,16 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_CertificateHttpS3ChallengeOutputReference{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnComplexObject)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-acme.certificate.CertificateHttpWebrootChallenge",
+		"@cdktn/provider-acme.certificate.CertificateHttpWebrootChallenge",
 		reflect.TypeOf((*CertificateHttpWebrootChallenge)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.certificate.CertificateHttpWebrootChallengeOutputReference",
+		"@cdktn/provider-acme.certificate.CertificateHttpWebrootChallengeOutputReference",
 		reflect.TypeOf((*CertificateHttpWebrootChallengeOutputReference)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
@@ -377,16 +390,16 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_CertificateHttpWebrootChallengeOutputReference{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnComplexObject)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-acme.certificate.CertificateTlsChallenge",
+		"@cdktn/provider-acme.certificate.CertificateTlsChallenge",
 		reflect.TypeOf((*CertificateTlsChallenge)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-acme.certificate.CertificateTlsChallengeOutputReference",
+		"@cdktn/provider-acme.certificate.CertificateTlsChallengeOutputReference",
 		reflect.TypeOf((*CertificateTlsChallengeOutputReference)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
@@ -416,7 +429,7 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_CertificateTlsChallengeOutputReference{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			_jsii_.InitJsiiProxy(&j.Type__cdktnComplexObject)
 			return &j
 		},
 	)

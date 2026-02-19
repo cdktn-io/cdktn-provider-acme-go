@@ -1,25 +1,25 @@
-// Copyright (c) HashiCorp, Inc.
+// Copyright IBM Corp. 2021, 2026
 // SPDX-License-Identifier: MPL-2.0
 
 package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v12/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v12/provider/internal"
-	"github.com/hashicorp/terraform-cdk-go/cdktf"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/provider/internal"
+	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs acme}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs acme}.
 type AcmeProvider interface {
-	cdktf.TerraformProvider
+	cdktn.TerraformProvider
 	Alias() *string
 	SetAlias(val *string)
 	AliasInput() *string
 	// Experimental.
-	CdktfStack() cdktf.TerraformStack
+	CdktfStack() cdktn.TerraformStack
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -36,7 +36,7 @@ type AcmeProvider interface {
 	SetServerUrl(val *string)
 	ServerUrlInput() *string
 	// Experimental.
-	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
+	TerraformGeneratorMetadata() *cdktn.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformProviderSource() *string
 	// Experimental.
@@ -65,7 +65,7 @@ type AcmeProvider interface {
 
 // The jsii proxy struct for AcmeProvider
 type jsiiProxy_AcmeProvider struct {
-	internal.Type__cdktfTerraformProvider
+	internal.Type__cdktnTerraformProvider
 }
 
 func (j *jsiiProxy_AcmeProvider) Alias() *string {
@@ -88,8 +88,8 @@ func (j *jsiiProxy_AcmeProvider) AliasInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AcmeProvider) CdktfStack() cdktf.TerraformStack {
-	var returns cdktf.TerraformStack
+func (j *jsiiProxy_AcmeProvider) CdktfStack() cdktn.TerraformStack {
+	var returns cdktn.TerraformStack
 	_jsii_.Get(
 		j,
 		"cdktfStack",
@@ -178,8 +178,8 @@ func (j *jsiiProxy_AcmeProvider) ServerUrlInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AcmeProvider) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
-	var returns *cdktf.TerraformProviderGeneratorMetadata
+func (j *jsiiProxy_AcmeProvider) TerraformGeneratorMetadata() *cdktn.TerraformProviderGeneratorMetadata {
+	var returns *cdktn.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
 		j,
 		"terraformGeneratorMetadata",
@@ -209,7 +209,7 @@ func (j *jsiiProxy_AcmeProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs acme} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs acme} Resource.
 func NewAcmeProvider(scope constructs.Construct, id *string, config *AcmeProviderConfig) AcmeProvider {
 	_init_.Initialize()
 
@@ -219,7 +219,7 @@ func NewAcmeProvider(scope constructs.Construct, id *string, config *AcmeProvide
 	j := jsiiProxy_AcmeProvider{}
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.provider.AcmeProvider",
+		"@cdktn/provider-acme.provider.AcmeProvider",
 		[]interface{}{scope, id, config},
 		&j,
 	)
@@ -227,12 +227,12 @@ func NewAcmeProvider(scope constructs.Construct, id *string, config *AcmeProvide
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs acme} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs acme} Resource.
 func NewAcmeProvider_Override(a AcmeProvider, scope constructs.Construct, id *string, config *AcmeProviderConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.provider.AcmeProvider",
+		"@cdktn/provider-acme.provider.AcmeProvider",
 		[]interface{}{scope, id, config},
 		a,
 	)
@@ -254,17 +254,17 @@ func (j *jsiiProxy_AcmeProvider)SetServerUrl(val *string) {
 	)
 }
 
-// Generates CDKTF code for importing a AcmeProvider resource upon running "cdktf plan <stack-name>".
-func AcmeProvider_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+// Generates CDKTN code for importing a AcmeProvider resource upon running "cdktn plan <stack-name>".
+func AcmeProvider_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktn.TerraformProvider) cdktn.ImportableResource {
 	_init_.Initialize()
 
 	if err := validateAcmeProvider_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
 		panic(err)
 	}
-	var returns cdktf.ImportableResource
+	var returns cdktn.ImportableResource
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.provider.AcmeProvider",
+		"@cdktn/provider-acme.provider.AcmeProvider",
 		"generateConfigForImport",
 		[]interface{}{scope, importToId, importFromId, provider},
 		&returns,
@@ -299,7 +299,7 @@ func AcmeProvider_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.provider.AcmeProvider",
+		"@cdktn/provider-acme.provider.AcmeProvider",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -318,7 +318,7 @@ func AcmeProvider_IsTerraformElement(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.provider.AcmeProvider",
+		"@cdktn/provider-acme.provider.AcmeProvider",
 		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
@@ -337,7 +337,7 @@ func AcmeProvider_IsTerraformProvider(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.provider.AcmeProvider",
+		"@cdktn/provider-acme.provider.AcmeProvider",
 		"isTerraformProvider",
 		[]interface{}{x},
 		&returns,
@@ -350,7 +350,7 @@ func AcmeProvider_TfResourceType() *string {
 	_init_.Initialize()
 	var returns *string
 	_jsii_.StaticGet(
-		"@cdktf/provider-acme.provider.AcmeProvider",
+		"@cdktn/provider-acme.provider.AcmeProvider",
 		"tfResourceType",
 		&returns,
 	)

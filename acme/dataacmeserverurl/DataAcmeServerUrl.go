@@ -1,22 +1,22 @@
-// Copyright (c) HashiCorp, Inc.
+// Copyright IBM Corp. 2021, 2026
 // SPDX-License-Identifier: MPL-2.0
 
 package dataacmeserverurl
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v12/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v12/dataacmeserverurl/internal"
-	"github.com/hashicorp/terraform-cdk-go/cdktf"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/dataacmeserverurl/internal"
+	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs/data-sources/server_url acme_server_url}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/data-sources/server_url acme_server_url}.
 type DataAcmeServerUrl interface {
-	cdktf.TerraformDataSource
+	cdktn.TerraformDataSource
 	// Experimental.
-	CdktfStack() cdktf.TerraformStack
+	CdktfStack() cdktn.TerraformStack
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -28,9 +28,9 @@ type DataAcmeServerUrl interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	// Experimental.
-	ForEach() cdktf.ITerraformIterator
+	ForEach() cdktn.ITerraformIterator
 	// Experimental.
-	SetForEach(val cdktf.ITerraformIterator)
+	SetForEach(val cdktn.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -39,20 +39,20 @@ type DataAcmeServerUrl interface {
 	SetId(val *string)
 	IdInput() *string
 	// Experimental.
-	Lifecycle() *cdktf.TerraformResourceLifecycle
+	Lifecycle() *cdktn.TerraformResourceLifecycle
 	// Experimental.
-	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	SetLifecycle(val *cdktn.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
-	Provider() cdktf.TerraformProvider
+	Provider() cdktn.TerraformProvider
 	// Experimental.
-	SetProvider(val cdktf.TerraformProvider)
+	SetProvider(val cdktn.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
 	ServerUrl() *string
 	// Experimental.
-	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
+	TerraformGeneratorMetadata() *cdktn.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
@@ -62,7 +62,7 @@ type DataAcmeServerUrl interface {
 	// Experimental.
 	GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 	// Experimental.
-	GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable
+	GetBooleanAttribute(terraformAttribute *string) cdktn.IResolvable
 	// Experimental.
 	GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 	// Experimental.
@@ -78,7 +78,7 @@ type DataAcmeServerUrl interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktn.IResolvable
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -102,11 +102,11 @@ type DataAcmeServerUrl interface {
 
 // The jsii proxy struct for DataAcmeServerUrl
 type jsiiProxy_DataAcmeServerUrl struct {
-	internal.Type__cdktfTerraformDataSource
+	internal.Type__cdktnTerraformDataSource
 }
 
-func (j *jsiiProxy_DataAcmeServerUrl) CdktfStack() cdktf.TerraformStack {
-	var returns cdktf.TerraformStack
+func (j *jsiiProxy_DataAcmeServerUrl) CdktfStack() cdktn.TerraformStack {
+	var returns cdktn.TerraformStack
 	_jsii_.Get(
 		j,
 		"cdktfStack",
@@ -145,8 +145,8 @@ func (j *jsiiProxy_DataAcmeServerUrl) DependsOn() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_DataAcmeServerUrl) ForEach() cdktf.ITerraformIterator {
-	var returns cdktf.ITerraformIterator
+func (j *jsiiProxy_DataAcmeServerUrl) ForEach() cdktn.ITerraformIterator {
+	var returns cdktn.ITerraformIterator
 	_jsii_.Get(
 		j,
 		"forEach",
@@ -195,8 +195,8 @@ func (j *jsiiProxy_DataAcmeServerUrl) IdInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataAcmeServerUrl) Lifecycle() *cdktf.TerraformResourceLifecycle {
-	var returns *cdktf.TerraformResourceLifecycle
+func (j *jsiiProxy_DataAcmeServerUrl) Lifecycle() *cdktn.TerraformResourceLifecycle {
+	var returns *cdktn.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
 		"lifecycle",
@@ -215,8 +215,8 @@ func (j *jsiiProxy_DataAcmeServerUrl) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_DataAcmeServerUrl) Provider() cdktf.TerraformProvider {
-	var returns cdktf.TerraformProvider
+func (j *jsiiProxy_DataAcmeServerUrl) Provider() cdktn.TerraformProvider {
+	var returns cdktn.TerraformProvider
 	_jsii_.Get(
 		j,
 		"provider",
@@ -245,8 +245,8 @@ func (j *jsiiProxy_DataAcmeServerUrl) ServerUrl() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataAcmeServerUrl) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
-	var returns *cdktf.TerraformProviderGeneratorMetadata
+func (j *jsiiProxy_DataAcmeServerUrl) TerraformGeneratorMetadata() *cdktn.TerraformProviderGeneratorMetadata {
+	var returns *cdktn.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
 		j,
 		"terraformGeneratorMetadata",
@@ -276,7 +276,7 @@ func (j *jsiiProxy_DataAcmeServerUrl) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs/data-sources/server_url acme_server_url} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/data-sources/server_url acme_server_url} Data Source.
 func NewDataAcmeServerUrl(scope constructs.Construct, id *string, config *DataAcmeServerUrlConfig) DataAcmeServerUrl {
 	_init_.Initialize()
 
@@ -286,7 +286,7 @@ func NewDataAcmeServerUrl(scope constructs.Construct, id *string, config *DataAc
 	j := jsiiProxy_DataAcmeServerUrl{}
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
+		"@cdktn/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
 		[]interface{}{scope, id, config},
 		&j,
 	)
@@ -294,12 +294,12 @@ func NewDataAcmeServerUrl(scope constructs.Construct, id *string, config *DataAc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.39.0/docs/data-sources/server_url acme_server_url} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.44.1/docs/data-sources/server_url acme_server_url} Data Source.
 func NewDataAcmeServerUrl_Override(d DataAcmeServerUrl, scope constructs.Construct, id *string, config *DataAcmeServerUrlConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
+		"@cdktn/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
 		[]interface{}{scope, id, config},
 		d,
 	)
@@ -324,7 +324,7 @@ func (j *jsiiProxy_DataAcmeServerUrl)SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataAcmeServerUrl)SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_DataAcmeServerUrl)SetForEach(val cdktn.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -343,7 +343,7 @@ func (j *jsiiProxy_DataAcmeServerUrl)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataAcmeServerUrl)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_DataAcmeServerUrl)SetLifecycle(val *cdktn.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
 	}
@@ -354,7 +354,7 @@ func (j *jsiiProxy_DataAcmeServerUrl)SetLifecycle(val *cdktf.TerraformResourceLi
 	)
 }
 
-func (j *jsiiProxy_DataAcmeServerUrl)SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_DataAcmeServerUrl)SetProvider(val cdktn.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -362,17 +362,17 @@ func (j *jsiiProxy_DataAcmeServerUrl)SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-// Generates CDKTF code for importing a DataAcmeServerUrl resource upon running "cdktf plan <stack-name>".
-func DataAcmeServerUrl_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+// Generates CDKTN code for importing a DataAcmeServerUrl resource upon running "cdktn plan <stack-name>".
+func DataAcmeServerUrl_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktn.TerraformProvider) cdktn.ImportableResource {
 	_init_.Initialize()
 
 	if err := validateDataAcmeServerUrl_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
 		panic(err)
 	}
-	var returns cdktf.ImportableResource
+	var returns cdktn.ImportableResource
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
+		"@cdktn/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
 		"generateConfigForImport",
 		[]interface{}{scope, importToId, importFromId, provider},
 		&returns,
@@ -407,7 +407,7 @@ func DataAcmeServerUrl_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
+		"@cdktn/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -426,7 +426,7 @@ func DataAcmeServerUrl_IsTerraformDataSource(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
+		"@cdktn/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
 		"isTerraformDataSource",
 		[]interface{}{x},
 		&returns,
@@ -445,7 +445,7 @@ func DataAcmeServerUrl_IsTerraformElement(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
+		"@cdktn/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
 		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
@@ -458,7 +458,7 @@ func DataAcmeServerUrl_TfResourceType() *string {
 	_init_.Initialize()
 	var returns *string
 	_jsii_.StaticGet(
-		"@cdktf/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
+		"@cdktn/provider-acme.dataAcmeServerUrl.DataAcmeServerUrl",
 		"tfResourceType",
 		&returns,
 	)
@@ -492,11 +492,11 @@ func (d *jsiiProxy_DataAcmeServerUrl) GetAnyMapAttribute(terraformAttribute *str
 	return returns
 }
 
-func (d *jsiiProxy_DataAcmeServerUrl) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (d *jsiiProxy_DataAcmeServerUrl) GetBooleanAttribute(terraformAttribute *string) cdktn.IResolvable {
 	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
-	var returns cdktf.IResolvable
+	var returns cdktn.IResolvable
 
 	_jsii_.Invoke(
 		d,
@@ -620,11 +620,11 @@ func (d *jsiiProxy_DataAcmeServerUrl) GetStringMapAttribute(terraformAttribute *
 	return returns
 }
 
-func (d *jsiiProxy_DataAcmeServerUrl) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (d *jsiiProxy_DataAcmeServerUrl) InterpolationForAttribute(terraformAttribute *string) cdktn.IResolvable {
 	if err := d.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
-	var returns cdktf.IResolvable
+	var returns cdktn.IResolvable
 
 	_jsii_.Invoke(
 		d,
