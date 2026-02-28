@@ -164,6 +164,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "useRenewalInfoInput", GoGetter: "UseRenewalInfoInput"},
 			_jsii_.MemberProperty{JsiiProperty: "validityDays", GoGetter: "ValidityDays"},
 			_jsii_.MemberProperty{JsiiProperty: "validityDaysInput", GoGetter: "ValidityDaysInput"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_Certificate{}
