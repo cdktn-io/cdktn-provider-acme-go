@@ -5,14 +5,14 @@ package registration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v14/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v13/registration/internal"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v14/registration/internal"
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.47.0/docs/resources/registration acme_registration}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.48.1/docs/resources/registration acme_registration}.
 type Registration interface {
 	cdktn.TerraformResource
 	AccountKeyAlgorithm() *string
@@ -474,7 +474,7 @@ func (j *jsiiProxy_Registration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.47.0/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.48.1/docs/resources/registration acme_registration} Resource.
 func NewRegistration(scope constructs.Construct, id *string, config *RegistrationConfig) Registration {
 	_init_.Initialize()
 
@@ -492,7 +492,7 @@ func NewRegistration(scope constructs.Construct, id *string, config *Registratio
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.47.0/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.48.1/docs/resources/registration acme_registration} Resource.
 func NewRegistration_Override(r Registration, scope constructs.Construct, id *string, config *RegistrationConfig) {
 	_init_.Initialize()
 
