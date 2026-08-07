@@ -59,6 +59,10 @@ func (c *jsiiProxy_Certificate) validateInterpolationForAttributeParameters(terr
 	return nil
 }
 
+func (c *jsiiProxy_Certificate) validateMarkWriteOnlyAttributeParameters(value interface{}) error {
+	return nil
+}
+
 func (c *jsiiProxy_Certificate) validateMoveFromIdParameters(id *string) error {
 	return nil
 }
@@ -96,6 +100,10 @@ func (c *jsiiProxy_Certificate) validatePutHttpWebrootChallengeParameters(value 
 }
 
 func (c *jsiiProxy_Certificate) validatePutTlsChallengeParameters(value *CertificateTlsChallenge) error {
+	return nil
+}
+
+func (c *jsiiProxy_Certificate) validateRegisterProviderFeatureUsageParameters(feature cdktn.ProviderFeature) error {
 	return nil
 }
 

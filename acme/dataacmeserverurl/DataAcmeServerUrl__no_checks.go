@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataAcmeServerUrl) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
+func (d *jsiiProxy_DataAcmeServerUrl) validateRegisterProviderFeatureUsageParameters(feature cdktn.ProviderFeature) error {
+	return nil
+}
+
 func validateDataAcmeServerUrl_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -15,6 +15,10 @@ func (a *jsiiProxy_AcmeProvider) validateOverrideLogicalIdParameters(newLogicalI
 	return nil
 }
 
+func (a *jsiiProxy_AcmeProvider) validateRegisterProviderFeatureUsageParameters(feature cdktn.ProviderFeature) error {
+	return nil
+}
+
 func validateAcmeProvider_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

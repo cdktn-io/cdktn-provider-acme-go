@@ -5,9 +5,9 @@ package registration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v14/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v15/jsii"
 
-	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v14/registration/internal"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v15/registration/internal"
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
