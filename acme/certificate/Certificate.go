@@ -5,14 +5,14 @@ package certificate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v15/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v16/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v15/certificate/internal"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v16/certificate/internal"
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.48.3/docs/resources/certificate acme_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/3.2.1/docs/resources/certificate acme_certificate}.
 type Certificate interface {
 	cdktn.TerraformResource
 	AccountKeyPem() *string
@@ -56,9 +56,9 @@ type Certificate interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
-	DisableCompletePropagation() interface{}
-	SetDisableCompletePropagation(val interface{})
-	DisableCompletePropagationInput() interface{}
+	DisableAuthoritativePropagation() interface{}
+	SetDisableAuthoritativePropagation(val interface{})
+	DisableAuthoritativePropagationInput() interface{}
 	DnsChallenge() CertificateDnsChallengeList
 	DnsChallengeInput() interface{}
 	// Experimental.
@@ -262,7 +262,7 @@ type Certificate interface {
 	ResetCertTimeout()
 	ResetCommonName()
 	ResetDeactivateAuthorizations()
-	ResetDisableCompletePropagation()
+	ResetDisableAuthoritativePropagation()
 	ResetDnsChallenge()
 	ResetHttpChallenge()
 	ResetHttpMemcachedChallenge()
@@ -556,21 +556,21 @@ func (j *jsiiProxy_Certificate) DependsOn() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_Certificate) DisableCompletePropagation() interface{} {
+func (j *jsiiProxy_Certificate) DisableAuthoritativePropagation() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
-		"disableCompletePropagation",
+		"disableAuthoritativePropagation",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_Certificate) DisableCompletePropagationInput() interface{} {
+func (j *jsiiProxy_Certificate) DisableAuthoritativePropagationInput() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
-		"disableCompletePropagationInput",
+		"disableAuthoritativePropagationInput",
 		&returns,
 	)
 	return returns
@@ -1217,7 +1217,7 @@ func (j *jsiiProxy_Certificate) ValidityDaysInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.48.3/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/3.2.1/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate(scope constructs.Construct, id *string, config *CertificateConfig) Certificate {
 	_init_.Initialize()
 
@@ -1235,7 +1235,7 @@ func NewCertificate(scope constructs.Construct, id *string, config *CertificateC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.48.3/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/3.2.1/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate_Override(c Certificate, scope constructs.Construct, id *string, config *CertificateConfig) {
 	_init_.Initialize()
 
@@ -1342,13 +1342,13 @@ func (j *jsiiProxy_Certificate)SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Certificate)SetDisableCompletePropagation(val interface{}) {
-	if err := j.validateSetDisableCompletePropagationParameters(val); err != nil {
+func (j *jsiiProxy_Certificate)SetDisableAuthoritativePropagation(val interface{}) {
+	if err := j.validateSetDisableAuthoritativePropagationParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"disableCompletePropagation",
+		"disableAuthoritativePropagation",
 		val,
 	)
 }
@@ -2064,10 +2064,10 @@ func (c *jsiiProxy_Certificate) ResetDeactivateAuthorizations() {
 	)
 }
 
-func (c *jsiiProxy_Certificate) ResetDisableCompletePropagation() {
+func (c *jsiiProxy_Certificate) ResetDisableAuthoritativePropagation() {
 	_jsii_.InvokeVoid(
 		c,
-		"resetDisableCompletePropagation",
+		"resetDisableAuthoritativePropagation",
 		nil, // no parameters
 	)
 }

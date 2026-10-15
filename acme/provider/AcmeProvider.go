@@ -5,14 +5,14 @@ package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v15/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v16/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v15/provider/internal"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v16/provider/internal"
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.48.3/docs acme}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/3.2.1/docs acme}.
 type AcmeProvider interface {
 	cdktn.TerraformProvider
 	Alias() *string
@@ -231,7 +231,7 @@ func (j *jsiiProxy_AcmeProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.48.3/docs acme} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/3.2.1/docs acme} Resource.
 func NewAcmeProvider(scope constructs.Construct, id *string, config *AcmeProviderConfig) AcmeProvider {
 	_init_.Initialize()
 
@@ -249,7 +249,7 @@ func NewAcmeProvider(scope constructs.Construct, id *string, config *AcmeProvide
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.48.3/docs acme} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/3.2.1/docs acme} Resource.
 func NewAcmeProvider_Override(a AcmeProvider, scope constructs.Construct, id *string, config *AcmeProviderConfig) {
 	_init_.Initialize()
 

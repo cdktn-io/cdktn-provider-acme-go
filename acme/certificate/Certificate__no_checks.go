@@ -155,7 +155,7 @@ func (j *jsiiProxy_Certificate) validateSetDeactivateAuthorizationsParameters(va
 	return nil
 }
 
-func (j *jsiiProxy_Certificate) validateSetDisableCompletePropagationParameters(val interface{}) error {
+func (j *jsiiProxy_Certificate) validateSetDisableAuthoritativePropagationParameters(val interface{}) error {
 	return nil
 }
 

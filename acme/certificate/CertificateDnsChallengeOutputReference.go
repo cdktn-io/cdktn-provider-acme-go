@@ -5,9 +5,9 @@ package certificate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v15/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v16/jsii"
 
-	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v15/certificate/internal"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v16/certificate/internal"
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
@@ -35,6 +35,9 @@ type CertificateDnsChallengeOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	MatchDomains() *[]*string
+	SetMatchDomains(val *[]*string)
+	MatchDomainsInput() *[]*string
 	Provider() *string
 	SetProvider(val *string)
 	ProviderInput() *string
@@ -71,6 +74,7 @@ type CertificateDnsChallengeOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktn.IResolvable
 	ResetConfig()
+	ResetMatchDomains()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(context cdktn.IResolveContext) interface{}
@@ -151,6 +155,26 @@ func (j *jsiiProxy_CertificateDnsChallengeOutputReference) InternalValue() inter
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CertificateDnsChallengeOutputReference) MatchDomains() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"matchDomains",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CertificateDnsChallengeOutputReference) MatchDomainsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"matchDomainsInput",
 		&returns,
 	)
 	return returns
@@ -264,6 +288,17 @@ func (j *jsiiProxy_CertificateDnsChallengeOutputReference)SetInternalValue(val i
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CertificateDnsChallengeOutputReference)SetMatchDomains(val *[]*string) {
+	if err := j.validateSetMatchDomainsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"matchDomains",
 		val,
 	)
 }
@@ -491,6 +526,14 @@ func (c *jsiiProxy_CertificateDnsChallengeOutputReference) ResetConfig() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetConfig",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CertificateDnsChallengeOutputReference) ResetMatchDomains() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMatchDomains",
 		nil, // no parameters
 	)
 }

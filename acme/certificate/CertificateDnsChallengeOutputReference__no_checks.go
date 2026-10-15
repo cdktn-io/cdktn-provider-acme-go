@@ -67,6 +67,10 @@ func (j *jsiiProxy_CertificateDnsChallengeOutputReference) validateSetInternalVa
 	return nil
 }
 
+func (j *jsiiProxy_CertificateDnsChallengeOutputReference) validateSetMatchDomainsParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_CertificateDnsChallengeOutputReference) validateSetProviderParameters(val *string) error {
 	return nil
 }
