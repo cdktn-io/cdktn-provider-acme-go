@@ -5,10 +5,10 @@ package dataacmeserverurl
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v16/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-acme-go/acme/v17/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v16/dataacmeserverurl/internal"
+	"github.com/cdktn-io/cdktn-provider-acme-go/acme/v17/dataacmeserverurl/internal"
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
