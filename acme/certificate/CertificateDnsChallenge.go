@@ -5,11 +5,11 @@ package certificate
 
 
 type CertificateDnsChallenge struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/3.2.2/docs/resources/certificate#provider Certificate#provider}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/3.3.0/docs/resources/certificate#provider Certificate#provider}.
 	Provider *string `field:"required" json:"provider" yaml:"provider"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/3.2.2/docs/resources/certificate#config Certificate#config}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/3.3.0/docs/resources/certificate#config Certificate#config}.
 	Config *map[string]*string `field:"optional" json:"config" yaml:"config"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/3.2.2/docs/resources/certificate#match_domains Certificate#match_domains}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/3.3.0/docs/resources/certificate#match_domains Certificate#match_domains}.
 	MatchDomains *[]*string `field:"optional" json:"matchDomains" yaml:"matchDomains"`
 }
 

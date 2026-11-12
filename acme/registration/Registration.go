@@ -12,7 +12,7 @@ import (
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/3.2.2/docs/resources/registration acme_registration}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/3.3.0/docs/resources/registration acme_registration}.
 type Registration interface {
 	cdktn.TerraformResource
 	AccountKeyAlgorithm() *string
@@ -523,7 +523,7 @@ func (j *jsiiProxy_Registration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/3.2.2/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/3.3.0/docs/resources/registration acme_registration} Resource.
 func NewRegistration(scope constructs.Construct, id *string, config *RegistrationConfig) Registration {
 	_init_.Initialize()
 
@@ -541,7 +541,7 @@ func NewRegistration(scope constructs.Construct, id *string, config *Registratio
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/3.2.2/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/3.3.0/docs/resources/registration acme_registration} Resource.
 func NewRegistration_Override(r Registration, scope constructs.Construct, id *string, config *RegistrationConfig) {
 	_init_.Initialize()
 
